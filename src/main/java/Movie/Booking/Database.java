@@ -16,7 +16,7 @@ public class Database {
 
     public Connection con;
     public Database() throws SQLException{
-        con= getConnection("jdbc:mysql://localhost:3306/ticket","root","root");
+        con= getConnection("jdbc:mysql://turntable.proxy.rlwy.net:17416/railway","root","yoCpchyKjlCGehRHXayJCOmZqSFnCGGV");
     }
     public int AddTicket(String movie,String seat,String members){
         try{
