@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ticket</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1f2025;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        label{
+            color: whitesmoke;
+            display: inline-block;
+            width: 100px;
+            margin-bottom: 10px;
+        }
+        h1{
+           font-size:50px ;
+        }
+        h2{
+            font-size:50px ;
+        }
+        form{
+            background-color: #2e3037;
+            font-size: 20px;
+            width: 100%;
+            max-width: 500px;  /* keeps it neat on large screen */
+            border-radius: 20px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        button{
+            display: block;
+            margin: 20px auto 0;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        select {
+            border-radius: 5px;
+            width: 100%;
+            font-size: 18px;
+            padding: 5px;
+            background-color: #2e3037;
+            color: white;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 600px) {
+            form {
+                font-size: 16px;
+                padding: 15px;
+            }
+
+            label {
+                width: 100%;
+                margin-bottom: 5px;
+            }
+
+            select {
+                font-size: 16px;
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+    
+
+<form action="/movie" method="post" >
+    <h1 style="color:skyblue;padding-left: 90px ;padding-bottom: 20px;">HARI CINEMAS</h1>
+    <h2 style="color:skyblue;padding-left: 90px ;padding-bottom: 20px;">Book Your Ticket</h2>
+    <div style="padding-left: 100px;">
+    <label style="padding-right: 54px;">Movie:</label>
+        <select name="movie" style="border-radius: 5px; width: 220px; font-size: 20px;background-color:#2e3037; color: white;">
+        <option value="Avengers End">Avengers End</option>
+        <option value="Avengers Infinity War">Infinity War</option>
+        <option value="Spiderman 2">Spiderman 2</option>
+        <option value="Gaurdians of Galaxy">Gaurdians of Galaxy</option>
+        <option value="Doctor Strange 2">Doctor Strange 2</option>
+    </select>
+    <br><br>
+
+    <label style="padding-right: 20px;">Seat Type:</label>
+    <select name="seat" style="border-radius: 5px; width: 220px; font-size: 20px;background-color:#2e3037; color: white;">
+        <option value="Regular">Regular</option>
+        <option value="Balcony">Balcony</option>
+        <option value="Vip">VIP</option>
+    </select>
+    <br><br>
+
+    <label style="padding-right: 23px;">Members:</label>
+    <select name="members" style="border-radius: 5px; width: 220px; font-size: 20px;background-color:#2e3037; color: white;">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+    <br><br>
+</div>
+<div style="padding-left: 215px; font-size: 20px; padding-top: 50px;">
+    <button type="submit" style="font-size: 20px;">Book Now</button>
+</div>
+    
+</form>
+</body>
+</html>
